@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { YouTubeVideo } from './youtube-video'
 import { AnimatedButton } from './animated-button'
 import { ParticlesEffect } from './particles-effect'
-import { ArrowUpRight, Heart, Instagram, MessageCircle, Sparkles, Users } from 'lucide-react'
+import { ArrowUpRight, Heart, Instagram, MessageCircle, Sparkles } from 'lucide-react'
 
 // Mantém a proposta pronta para ser reativada futuramente.
 const SHOW_SPONSORSHIP = false
@@ -156,29 +156,6 @@ export function LandingPage() {
               eis a nossa missão.”
             </blockquote>
 
-            <div className="mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
-                <Sparkles className="mb-4 h-5 w-5 text-amber-200" />
-                <strong className="block font-serif text-3xl text-white">3 horas</strong>
-                <span className="mt-2 block text-xs leading-5 text-white/55">
-                  de encontro intenso e inesquecível
-                </span>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
-                <Users className="mb-4 h-5 w-5 text-amber-200" />
-                <strong className="block font-serif text-3xl text-white">50</strong>
-                <span className="mt-2 block text-xs leading-5 text-white/55">
-                  voluntários na preparação
-                </span>
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
-                <Heart className="mb-4 h-5 w-5 text-amber-200" />
-                <strong className="block font-serif text-3xl text-white">1.800</strong>
-                <span className="mt-2 block text-xs leading-5 text-white/55">
-                  pessoas estimadas
-                </span>
-              </div>
-            </div>
           </div>
 
           <div className="relative mx-auto h-[540px] w-full max-w-[520px] sm:h-[650px]">
