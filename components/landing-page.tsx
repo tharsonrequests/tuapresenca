@@ -137,7 +137,7 @@ export function LandingPage() {
             </AnimatedButton>
             
             <AnimatedButton 
-              href="https://wa.me/5514988201043?text=Quero%20compartilhar%20minha%20experiência%20com%20o%20evento%20Tua%20Presença%20é%20Amor"
+              href="https://wa.me/14997778706?text=Quero%20compartilhar%20minha%20experiência%20com%20o%20evento%20Tua%20Presença%20é%20Amor"
               icon="whatsapp"
               delay={700}
             >
