@@ -4,8 +4,12 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { YouTubeVideo } from './youtube-video'
+import { AnimatedButton } from './animated-button'
 import { ParticlesEffect } from './particles-effect'
 import { ArrowUpRight, Heart, Instagram, MessageCircle, Sparkles, Users } from 'lucide-react'
+
+// Mantém a proposta pronta para ser reativada futuramente.
+const SHOW_SPONSORSHIP = false
 
 export function LandingPage() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -217,7 +221,7 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div className="mx-auto mt-24 w-full max-w-7xl md:mt-32">
+        {SHOW_SPONSORSHIP && <div className="mx-auto mt-24 w-full max-w-7xl md:mt-32">
           <div className="mx-auto max-w-3xl text-center">
             <div className="mb-5 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.32em] text-amber-200/80">
               <span className="h-px w-10 bg-amber-200/60" />
@@ -307,6 +311,29 @@ export function LandingPage() {
               <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
           </div>
+        </div>}
+      </section>
+
+      <section className="relative z-20 w-full px-4 pb-16 pt-4 md:pb-20 md:pt-8">
+        <div className="mx-auto max-w-3xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.04] px-6 py-10 text-center shadow-2xl shadow-black/20 backdrop-blur-sm md:px-12 md:py-14">
+          <Heart className="mx-auto h-7 w-7 fill-amber-200/15 text-amber-200" />
+          <h2 className="mt-5 font-serif text-3xl font-bold text-white md:text-4xl">
+            Sua experiência também faz parte dessa história
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-sm leading-7 text-white/65 md:text-base">
+            Viveu um momento especial no Tua Presença? Envie uma mensagem de
+            agradecimento ou compartilhe conosco como essa experiência tocou o
+            seu coração. Queremos ouvir você.
+          </p>
+          <div className="mx-auto mt-8 flex max-w-sm justify-center">
+            <AnimatedButton
+              href="https://wa.me/14997778706?text=Quero%20deixar%20meu%20agradecimento%20e%20compartilhar%20minha%20experi%C3%AAncia%20com%20o%20evento%20Tua%20Presen%C3%A7a%20%C3%A9%20Amor"
+              icon="whatsapp"
+              delay={0}
+            >
+              Compartilhar minha experiência
+            </AnimatedButton>
+          </div>
         </div>
       </section>
 
@@ -325,11 +352,11 @@ export function LandingPage() {
           <Instagram className="h-6 w-6 md:h-7 md:w-7" />
         </Link>
         <Link
-          href="https://wa.me/14997778706?text=Quero%20compartilhar%20minha%20experi%C3%AAncia%20com%20o%20evento%20Tua%20Presen%C3%A7a%20%C3%A9%20Amor"
+          href="https://wa.me/14997778706?text=Quero%20deixar%20meu%20agradecimento%20e%20compartilhar%20minha%20experi%C3%AAncia%20com%20o%20evento%20Tua%20Presen%C3%A7a%20%C3%A9%20Amor"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Falar com Tua Presença pelo WhatsApp"
-          className="group flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#25D366] text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"
+          className="flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#25D366] text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"
         >
           <MessageCircle className="h-6 w-6 fill-white/10 md:h-7 md:w-7" />
         </Link>
