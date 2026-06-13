@@ -16,10 +16,10 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Tua Presenca e Amor | Evento Especial',
-  description: 'Prepare seu coracao para viver algo especial. Uma experiencia de conexao espiritual e amor.',
-  keywords: ['evento', 'tua presenca', 'amor', 'espiritual', 'conexao'],
-  authors: [{ name: 'Tua Presenca e Amor' }],
+  title: 'Tua Presença é Amor | Evento Especial',
+  description: 'Prepare seu coração para viver algo especial. Uma experiência de conexão espiritual e amor.',
+  keywords: ['evento', 'tua presença', 'amor', 'espiritual', 'conexão'],
+  authors: [{ name: 'Tua Presença é Amor' }],
   openGraph: {
     title: 'Tua Presença é Amor',
     description: 'Prepare seu coração para viver algo especial. Uma experiência de conexão espiritual e amor.',

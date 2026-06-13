@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { YouTubeVideo } from './youtube-video'
-import { AnimatedButton } from './animated-button'
 import { ParticlesEffect } from './particles-effect'
+import { ArrowUpRight, Heart, Instagram, MessageCircle, Sparkles, Users } from 'lucide-react'
 
 export function LandingPage() {
   const [isLoaded, setIsLoaded] = useState(false)
@@ -118,44 +119,221 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* Buttons Section - Bottom */}
-      <section className="relative z-20 w-full px-4 pb-8 md:pb-12">
-        <div className="w-full max-w-md mx-auto flex flex-col items-center">
-          <div 
-            className={`
-              flex flex-col sm:flex-row gap-3 md:gap-4 w-full justify-center
-              transition-all duration-1000 ease-out delay-500
-              ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}
-            `}
-          >
-            <AnimatedButton 
-              href="https://www.instagram.com/tuapresenca_oficial?igsh=ZW9peTcxNWc0OHlvl"
-              icon="instagram"
-              delay={600}
-            >
-              Seguir no Instagram
-            </AnimatedButton>
-            
-            <AnimatedButton 
-              href="https://wa.me/14997778706?text=Quero%20compartilhar%20minha%20experiência%20com%20o%20evento%20Tua%20Presença%20é%20Amor"
-              icon="whatsapp"
-              delay={700}
-            >
-              Compartilhar experiência
-            </AnimatedButton>
+      {/* About Section */}
+      <section className="relative z-20 w-full px-4 py-20 md:px-8 md:py-32">
+        <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-amber-200/30 to-transparent" />
+
+        <div className="mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-20">
+          <div>
+            <div className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.32em] text-amber-200/80">
+              <span className="h-px w-10 bg-amber-200/60" />
+              Quem somos
+            </div>
+
+            <h2 className="max-w-2xl font-serif text-4xl font-bold leading-[1.08] text-white md:text-6xl">
+              Mais do que um evento, uma missão transformadora
+            </h2>
+
+            <div className="mt-8 max-w-2xl space-y-5 text-base leading-8 text-white/70 md:text-lg">
+              <p>
+                O Tua Presença chega à sua 6ª edição com um propósito muito claro:
+                levar adiante a mensagem de Jesus. Mais do que um evento, é um
+                convite a viver momentos de verdadeira conexão espiritual.
+              </p>
+              <p>
+                Apresentamos a presença de Deus de forma viva, criativa e
+                contemporânea, unindo adoração, pregação, oração, música, dança e
+                poesia em um encontro intenso e inesquecível.
+              </p>
+            </div>
+
+            <blockquote className="mt-9 border-l border-amber-200/50 pl-6 font-serif text-xl italic leading-9 text-amber-100/90 md:text-2xl">
+              “Proporcionar um encontro do povo com Nosso Senhor Jesus Cristo:
+              eis a nossa missão.”
+            </blockquote>
+
+            <div className="mt-10 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
+                <Sparkles className="mb-4 h-5 w-5 text-amber-200" />
+                <strong className="block font-serif text-3xl text-white">3 horas</strong>
+                <span className="mt-2 block text-xs leading-5 text-white/55">
+                  de encontro intenso e inesquecível
+                </span>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
+                <Users className="mb-4 h-5 w-5 text-amber-200" />
+                <strong className="block font-serif text-3xl text-white">50</strong>
+                <span className="mt-2 block text-xs leading-5 text-white/55">
+                  voluntários na preparação
+                </span>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-5 backdrop-blur-sm">
+                <Heart className="mb-4 h-5 w-5 text-amber-200" />
+                <strong className="block font-serif text-3xl text-white">1.800</strong>
+                <span className="mt-2 block text-xs leading-5 text-white/55">
+                  pessoas estimadas
+                </span>
+              </div>
+            </div>
           </div>
 
-          <p 
-            className={`
-              mt-6 md:mt-8 text-white/60 text-xs md:text-sm
-              transition-all duration-1000 ease-out delay-700
-              ${showContent ? 'opacity-100' : 'opacity-0'}
-            `}
-          >
-            Com amor, Tua Presença
-          </p>
+          <div className="relative mx-auto h-[540px] w-full max-w-[520px] sm:h-[650px]">
+            <div className="absolute -inset-8 rounded-full bg-fuchsia-800/10 blur-3xl" />
+
+            <div className="absolute left-0 top-8 h-[72%] w-[70%] overflow-hidden rounded-[2rem] border border-white/15 shadow-2xl shadow-black/40">
+              <Image
+                src="/images/about/momento-de-adoracao.jpg"
+                alt="Momento de adoração no evento Tua Presença"
+                fill
+                className="object-cover"
+                sizes="(max-width: 1024px) 70vw, 330px"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d0610]/40 via-transparent to-transparent" />
+            </div>
+
+            <div className="absolute right-0 top-0 h-[38%] w-[43%] rotate-2 overflow-hidden rounded-2xl border-2 border-[#0d0610] shadow-xl shadow-black/50">
+              <Image
+                src="/images/about/equipe-fundadora.jpg"
+                alt="Equipe à frente do Tua Presença"
+                fill
+                className="object-cover"
+                sizes="210px"
+              />
+            </div>
+
+            <div className="absolute bottom-3 right-0 h-[36%] w-[57%] -rotate-2 overflow-hidden rounded-2xl border-2 border-[#0d0610] shadow-xl shadow-black/50">
+              <Image
+                src="/images/about/comunidade.jpg"
+                alt="Comunidade reunida no Tua Presença"
+                fill
+                className="object-cover"
+                sizes="270px"
+              />
+            </div>
+
+            <div className="absolute bottom-[22%] left-[55%] flex h-12 w-12 items-center justify-center rounded-full border border-amber-100/30 bg-[#24102b]/90 shadow-lg shadow-black/40 backdrop-blur-md">
+              <Heart className="h-5 w-5 fill-amber-200/20 text-amber-200" />
+            </div>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-24 w-full max-w-7xl md:mt-32">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-5 flex items-center justify-center gap-3 text-xs font-semibold uppercase tracking-[0.32em] text-amber-200/80">
+              <span className="h-px w-10 bg-amber-200/60" />
+              Proposta de patrocínio
+              <span className="h-px w-10 bg-amber-200/60" />
+            </div>
+            <h3 className="font-serif text-4xl font-bold leading-tight text-white md:text-6xl">
+              Evangelize com a gente
+            </h3>
+            <p className="mt-6 text-base leading-8 text-white/65 md:text-lg">
+              Estamos em busca de parceiros para fazer parte desta missão
+              transformadora. Conheça nossos planos de patrocínio:
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-5 lg:grid-cols-3">
+            {[
+              {
+                name: 'Bronze',
+                price: 'R$ 150,00',
+                accent: 'from-red-500/25 to-orange-400/5',
+                items: [
+                  'Inclusão da logo nas mídias on',
+                  'Exibição da logo no telão antes do início do evento',
+                ],
+              },
+              {
+                name: 'Prata',
+                price: 'R$ 300,00',
+                accent: 'from-fuchsia-500/25 to-purple-400/5',
+                items: [
+                  'Inclusão da logo nas mídias on',
+                  'Vídeo dedicado nas mídias sociais junto a outros patrocinadores da mesma categoria',
+                  'Exibição da logo no telão antes do início do evento',
+                ],
+              },
+              {
+                name: 'Ouro',
+                price: 'R$ 700,00',
+                accent: 'from-violet-500/30 to-blue-500/5',
+                items: [
+                  'Inclusão da logo nas mídias on',
+                  'Vídeo dedicado nas mídias sociais com maior destaque para a marca',
+                  'Exibição da logo no telão antes do início do evento',
+                ],
+              },
+            ].map((plan) => (
+              <article
+                key={plan.name}
+                className={`relative overflow-hidden rounded-3xl border border-white/15 bg-gradient-to-br ${plan.accent} p-7 backdrop-blur-sm md:p-8`}
+              >
+                <div className="absolute inset-0 bg-[#16091b]/70" />
+                <div className="relative">
+                  <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/55">
+                    Plano
+                  </p>
+                  <h4 className="mt-2 font-serif text-4xl font-bold text-white">
+                    {plan.name}
+                  </h4>
+                  <ul className="mt-7 space-y-4">
+                    {plan.items.map((item) => (
+                      <li key={item} className="flex gap-3 text-sm leading-6 text-white/70">
+                        <Sparkles className="mt-1 h-4 w-4 shrink-0 text-amber-200/80" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="mt-8 border-t border-white/10 pt-6 font-serif text-3xl font-bold text-amber-100">
+                    {plan.price}
+                  </p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 flex flex-col items-center text-center">
+            <p className="font-serif text-xl text-white/80 md:text-2xl">
+              Obrigado por evangelizar com a gente!
+            </p>
+            <Link
+              href="https://wa.me/14997778706?text=Ol%C3%A1%21%20Quero%20conhecer%20a%20proposta%20de%20patroc%C3%ADnio%20do%20Tua%20Presen%C3%A7a."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-6 inline-flex items-center justify-center gap-3 rounded-full border border-amber-100/30 bg-amber-100 px-7 py-4 text-sm font-bold text-[#211027] transition-transform duration-300 hover:scale-[1.03]"
+            >
+              Quero patrocinar
+              <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </Link>
+          </div>
         </div>
       </section>
+
+      <footer className="relative z-20 px-4 pb-10 text-center text-xs text-white/50">
+        Com amor, Tua Presença
+      </footer>
+
+      <div className="fixed bottom-5 right-4 z-50 flex flex-col gap-3 md:bottom-7 md:right-7">
+        <Link
+          href="https://www.instagram.com/tuapresenca_oficial?igsh=ZW9peTcxNWc0OHlvl"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Seguir Tua Presença no Instagram"
+          className="group flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-gradient-to-br from-fuchsia-600 via-pink-500 to-amber-400 text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"
+        >
+          <Instagram className="h-6 w-6 md:h-7 md:w-7" />
+        </Link>
+        <Link
+          href="https://wa.me/14997778706?text=Quero%20compartilhar%20minha%20experi%C3%AAncia%20com%20o%20evento%20Tua%20Presen%C3%A7a%20%C3%A9%20Amor"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Falar com Tua Presença pelo WhatsApp"
+          className="group flex h-12 w-12 items-center justify-center rounded-full border border-white/20 bg-[#25D366] text-white shadow-lg shadow-black/40 transition-transform duration-300 hover:scale-110 md:h-14 md:w-14"
+        >
+          <MessageCircle className="h-6 w-6 fill-white/10 md:h-7 md:w-7" />
+        </Link>
+      </div>
     </main>
   )
 }
