@@ -129,7 +129,7 @@ export function LandingPage() {
             `}
           >
             <AnimatedButton 
-              href="https://www.instagram.com/tuapresenca_oficial"
+              href="https://www.instagram.com/tuapresenca_oficial?igsh=ZW9peTcxNWc0OHlvl"
               icon="instagram"
               delay={600}
             >
